@@ -1,0 +1,10 @@
+def squareSort(nums):
+    nums.sort()
+    for i in range(len(nums)):
+        
+        nums[i] = nums[i]*nums[i]
+    return nums
+            
+            
+print(squareSort([1,2, 3, 4,5 ,45,78,90,55,87,32,56,121,55,11]))
+
