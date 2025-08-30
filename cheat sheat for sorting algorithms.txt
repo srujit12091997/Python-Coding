@@ -1,0 +1,41 @@
+cheat sheat for sorting algorithms:
+
+Comparison-based sorting algo:
+
+Algorithm | Time (Best) | Time (Avg) | Time (Worst) | Space | Stable | In-Place | Notes
+Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) | ❌ | ✅ | Fast in practice, not stable
+Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | ✅ | ❌ | Good for linked lists, stable
+Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | ❌ | ✅ | Good for "Top K", uses heap
+Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | ✅ | ✅ | Good for small/k-sorted arrays
+Selection Sort | O(n²) | O(n²) | O(n²) | O(1) | ❌ | ✅ | Rarely used, concept check
+Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | ✅ | ✅ | Educational, not practical
+
+
+Non-comparison-based sorting algo:
+
+Algorithm | Time (Best/Avg/Worst) | Space | Stable | In-Place | Notes
+Counting Sort | O(n + k) | O(k) | ✅ | ❌ | Only for integers in a small range
+Radix Sort | O(nk) | O(n + k) | ✅ | ❌ | Used with fixed-size integers/strings
+Bucket Sort | O(n + k) | O(n + k) | ✅ | ❌ | Assumes uniform distribution
+
+
+when to use what:
+
+Scenario | Recommended Algorithm
+Need stability | Merge Sort / Counting Sort / Radix Sort
+Space constrained | Quick Sort (in-place, but not stable)
+Partially sorted list | Insertion Sort
+Find top-K elements | Heap Sort / Quickselect
+Linked List | Merge Sort (efficient recursion)
+String sorting (fixed length) | Radix Sort
+External sorting (big data) | Merge Sort (easy to parallelize)
+
+Patterns in leetcode:
+
+Pattern | Example Problem
+Sort + Sweep Line | Merge Intervals, Meeting Rooms II
+Sort + Greedy | Non-overlapping Intervals, Task Scheduler
+Sort + Two Pointers | 3Sum, Two Sum II, Container With Most Water
+Custom Comparator | Reorder Data in Log Files
+Sort + Heap | Top K Frequent Elements, K Closest Points
+
